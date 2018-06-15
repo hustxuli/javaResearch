@@ -1,4 +1,4 @@
-package com.sherry.designpattern.StaticFactory;
+package com.sherry.designpattern.create.staticfactory;
 
 /**
  *
