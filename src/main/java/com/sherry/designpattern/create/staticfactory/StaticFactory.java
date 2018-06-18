@@ -19,7 +19,7 @@ package com.sherry.designpattern.create.staticfactory;
  */
 public class StaticFactory {
     public static void main(String [] args){
-        Fruit fruit = FruitFactory.newApple("red apple");
-        System.out.println(fruit.doSomething());
+        Fruit fruit = FruitFactory.createApple("red apple");
+        System.out.println(fruit.getFruitInfo());
     }
 }

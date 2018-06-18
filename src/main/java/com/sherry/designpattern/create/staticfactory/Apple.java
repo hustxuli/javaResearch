@@ -12,7 +12,12 @@ public class Apple extends Fruit {
     }
 
     @Override
-    public String doSomething() {
-        return this.name;
+    public String getFruitInfo() {
+        return "Name: " + this.name;
+    }
+
+    @Override
+    public String getFruitDrinks() {
+        return "Drinks: apple juice" ;
     }
 }
