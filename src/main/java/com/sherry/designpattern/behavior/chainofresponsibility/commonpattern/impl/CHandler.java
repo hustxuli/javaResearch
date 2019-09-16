@@ -1,17 +1,16 @@
 package com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl;
 
 import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.Handler;
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.ParamContext;
 
 /**
  * @Author: Sherry
- * @Date: 2019/9/14 下午7:04
+ * @Date: 2019/9/16 下午10:41
  */
-public class AHandler implements Handler<DefaultParamContext> {
+public class CHandler implements Handler<DefaultParamContext> {
     @Override
     public void process(DefaultParamContext param) {
         if(param.isContinue() == true){
-            System.out.println("AHandler处理");
+            System.out.println("CHandler处理");
         }
     }
 }

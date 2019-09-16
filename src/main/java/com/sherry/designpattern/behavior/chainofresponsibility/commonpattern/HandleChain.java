@@ -6,6 +6,18 @@ package com.sherry.designpattern.behavior.chainofresponsibility.commonpattern;
  */
 public interface HandleChain<T extends ParamContext> {
     void start(T paramContext);
-    void addNode(T handleNode);
-    void removeNode(T handleNode);
+    //void addNode(HandleNode<T> handleNode);
+    //void removeNode(HandleNode<T>  handleNode);
+
+    //实际只关心HandlerNode中的handler，故单独提出来
+
+
+    /**
+     * 加在尾部
+     * @param handler
+     */
+    void addHandler(Handler<T> handler);
+
+    void removeHandler(Handler<T> handler);
+
 }

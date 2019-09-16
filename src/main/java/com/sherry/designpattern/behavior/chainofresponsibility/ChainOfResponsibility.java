@@ -1,5 +1,11 @@
 package com.sherry.designpattern.behavior.chainofresponsibility;
 
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.*;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.Handler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl.AHandler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl.BHandler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl.CHandler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl.DefaultParamContext;
 import com.sherry.designpattern.behavior.chainofresponsibility.pattern1.impl.NodeChain;
 import com.sherry.designpattern.behavior.chainofresponsibility.pattern1.Request;
 import com.sherry.designpattern.behavior.chainofresponsibility.pattern1.Response;
@@ -25,6 +31,7 @@ import com.sherry.designpattern.behavior.chainofresponsibility.pattern2.*;
 public class ChainOfResponsibility {
     public static void main(String [] args){
         //pattern1
+        System.out.println("pattern1");
         ANode aNode = new ANode();
         BNode bNode = new BNode();
         NodeChain chain  = new NodeChain().addNode(aNode).addNode(bNode);
@@ -36,6 +43,7 @@ public class ChainOfResponsibility {
         System.out.println();
 
         //pattern2
+        System.out.println("pattern2");
         LeaderLevel1 leader1 = new LeaderLevel1();
         LeaderLevel2 leader2 = new LeaderLevel2();
         LeaderLevel3 leader3 = new LeaderLevel3();
@@ -53,6 +61,21 @@ public class ChainOfResponsibility {
         System.out.println();
 
         //common pattern (抽象出来，接口作为成员变量)
+        System.out.println("common pattern");
+        HandleChain<DefaultParamContext> handleChain = new HandleChainImpl();
+        Handler<DefaultParamContext> handler1 = new AHandler();
+        Handler<DefaultParamContext> handler2 = new BHandler();
+        Handler<DefaultParamContext> handler3 = new CHandler();
+        DefaultParamContext paramContext = new DefaultParamContext();
+        handleChain.addHandler(handler1);
+        handleChain.addHandler(handler2);
+        handleChain.addHandler(handler3);
+
+        handleChain.start(paramContext);
+
+        System.out.println("———删除节点后———");
+        handleChain.removeHandler(handler3);
+        handleChain.start(paramContext);
 
 
 
