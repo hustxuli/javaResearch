@@ -7,9 +7,9 @@ import com.sherry.designpattern.behavior.observer.Subject;
  * @Author: Sherry
  * @Date: 2019/9/21 下午2:15
  */
-public class MyObserver implements Observer{
+public class Teacher implements Observer{
     private String name;
-    public MyObserver(String name){
+    public Teacher(String name){
         this.name = name;
     }
     /**

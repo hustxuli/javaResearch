@@ -18,7 +18,7 @@ public class StateMachineConfig<S, E, H> {
     private S nextState;
 
     //存放所有状态流转路线
-    //todo 这里为什么是final？？
+
     private final Map<S, StateConfiguration<S,E,H>> stateConfigurationMap = new HashMap<S, StateConfiguration<S,E,H>>();
 
     public StateMachineConfig from(S s){
