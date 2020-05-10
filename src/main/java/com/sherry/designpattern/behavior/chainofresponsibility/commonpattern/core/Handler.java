@@ -1,4 +1,6 @@
-package com.sherry.designpattern.behavior.chainofresponsibility.commonpattern;
+package com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core;
+
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.ParamContext;
 
 /**
  * @Author: Sherry

@@ -1,8 +1,9 @@
 package com.sherry.designpattern.behavior.observer;
 
-import java.util.Vector;
+import java.util.Observable;
 
 /**
+ * Java中有现成的接口，java.util.Observable
  * @Author: Sherry
  * @Date: 2019/9/21 下午2:10
  */

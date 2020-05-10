@@ -1,11 +1,12 @@
 package com.sherry.designpattern.behavior.chainofresponsibility;
 
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.*;
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.Handler;
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl.AHandler;
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl.BHandler;
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl.CHandler;
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.impl.DefaultParamContext;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.Handler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.biz.AHandler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.biz.BHandler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.biz.CHandler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.biz.DefaultParamContext;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.HandleChain;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.impl.HandleChainImpl;
 import com.sherry.designpattern.behavior.chainofresponsibility.pattern1.impl.NodeChain;
 import com.sherry.designpattern.behavior.chainofresponsibility.pattern1.Request;
 import com.sherry.designpattern.behavior.chainofresponsibility.pattern1.Response;

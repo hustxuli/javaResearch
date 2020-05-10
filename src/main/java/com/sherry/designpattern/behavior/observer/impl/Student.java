@@ -7,9 +7,9 @@ import com.sherry.designpattern.behavior.observer.Subject;
  * @Author: Sherry
  * @Date: 2019/9/21 下午2:15
  */
-public class Teacher implements Observer{
+public class Student implements Observer{
     private String name;
-    public Teacher(String name){
+    public Student(String name){
         this.name = name;
     }
     /**
@@ -19,6 +19,7 @@ public class Teacher implements Observer{
      */
     @Override
     public void update(Subject subject, Object args) {
-        System.out.println("主题发送的'"+args+"'," + this.name +  "已收到");
+        Teacher teacher = (Teacher)subject;//接口强转为其子类实现类
+        System.out.println(teacher.getName()+"老师发送的'"+args+"'," + this.name +  "已收到");
     }
 }

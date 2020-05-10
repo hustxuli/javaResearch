@@ -1,7 +1,9 @@
-package com.sherry.designpattern.behavior.chainofresponsibility.commonpattern;
+package com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.impl;
 
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.HandleChain;
-import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.HandleNode;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.HandleChain;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.HandleNode;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.Handler;
+import com.sherry.designpattern.behavior.chainofresponsibility.commonpattern.core.ParamContext;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
